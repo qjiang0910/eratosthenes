@@ -18,8 +18,12 @@ def sieve_slow(nmax):
 
     all_primes = []
 
-    if nmax == 2: 
-        all_primes = [2]
+    if nmax == 1:
+        return []
+    elif nmax == 2:
+        return [2]
+    elif not isinstance(nmax, int):
+        raise TypeError('Input must be integer.')
     else:
         primes_head = [2]
         first = 3
